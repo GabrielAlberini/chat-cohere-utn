@@ -21,18 +21,31 @@ const App = () => {
   };
 
   return (
-    <section>
-      <h1>Chat con API de Cohere</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="¿Qué quieres saber?"
-          type="text"
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Enviar</button>
-      </form>
-      {loading ? <p>Esta en carga...</p> : <p>{response}</p>}
+    <section className="section">
+      <div className="container">
+        <h1 className="title">Chat con API de Cohere</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="field">
+            <div className="control">
+              <input
+                className="input"
+                placeholder="¿Qué quieres saber?"
+                type="text"
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
+          <div className="field">
+            <div className="control">
+              <button className="button is-primary" type="submit">
+                Enviar
+              </button>
+            </div>
+          </div>
+        </form>
+        {loading ? <p>Está en carga...</p> : <p>{response}</p>}
+      </div>
     </section>
   );
 };
