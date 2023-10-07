@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import { sendRequest } from "./controller/querie.mjs";
 
 dotenv.config();
@@ -8,6 +9,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
